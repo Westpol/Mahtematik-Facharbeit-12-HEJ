@@ -1,0 +1,114 @@
+\documentclass[fontsize=13pt,paper=a4,DIV12,cleardoublepage=empty, 
+liststotoc,idxtotoc,bibtotoc]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{stmaryrd}
+\usepackage{colortbl}
+\usepackage{eurosym}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{lscape}
+\usepackage{pdfpages} 
+%Seitenlayout
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}}
+\usepackage[left=25mm, right=25mm, bottom=30mm]{geometry}
+\usepackage[doublespacing]{setspace}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref} 
+\usepackage[figure]{hypcap}
+%Textstruktur
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+%Textaussehen
+\usepackage{framed}
+%Verzeichnisse
+\usepackage{csquotes}
+\usepackage[backend=biber, bibstyle=authoryear-ibid, uniquelist=false, maxbibnames=9, maxcitenames=3, citestyle=authoryear-icomp, isbn=true, url=true, block=space, pagetracker=page,   giveninits=false, dateabbrev=false, dashed=false ]{biblatex}
+\addbibresource{MA_literatur.bib}
+\DefineBibliographyStrings{ngerman}{ 
+	andothers = {{et\,al\adddot}},             
+} 
+\usepackage{etoolbox}
+\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchsta
+\expandafter\def\expandafter\quote\expandafter{\quote\small\singlespacing}
+
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+
+\newcommand*{\meincite}[1]{\citeauthor{#1} (\citeyear{#1})}
+
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PPO}{\mathcal{P}(\Omega)}
+
+\theoremstyle{plain}
+\newtheorem{satz}{Satz}[subsection]
+\newtheorem{lem}[satz]{Lemma}
+\newtheorem{theo}[satz]{Theorem}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{defi}{Definition}
+\theoremstyle{definition}
+\newtheorem{bei}[satz]{Beispiel}
+\newtheorem{bem}[satz]{Bemerkung}
+
+\begin{document}
+	\definecolor{gold}{rgb}{0.9,0.9,0}
+	\begin{titlepage}
+		\vspace*{-3cm}
+		\noindent
+		\hspace*{1cm}
+		\begin{minipage}{0.05\textwidth}
+			\begin{figure}[H]
+				\centering 
+				%\includegraphics[scale=0.2]{nrw.png}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{0.95\textwidth}
+			\begin{center}
+				{\LARGE Zentrum für schulpraktische Lehrerausbildung Siegen}\\
+				Seminar für das Lehramt an Gymnasien und Gesamtschulen
+			\end{center}
+		\end{minipage}
+		\\[0.5cm]
+		\begin{center}
+		\Large{Entwurf zur unterrichtspraktischen Prüfung im Fach Mathematik\footnote{gem. §32 (5) OVP vom 10.04.2011}}.\\[0.5cm]
+		\normalsize{vorgelegt von}\\[0.25cm]	
+		\large{Jan Heese}\\[0.5cm]
+		\end{center}
+	\begin{flushleft}
+	\hyperref[subsec:thema1]{\textbf{\large Thema der Unterrichtsreihe:}}  \\
+	\end{flushleft}
+	Kinder in der Welt: Multiplikation und Division von Brüchen im interkulturellen Kontext. 
+	\begin{flushleft}
+	\hyperref[subsec:thema2]{\textbf{\large Thema der Unterrichtsstunde:}} 
+	\end{flushleft}
+	Stationenlernen: Produktives Üben zur Multiplikation und Division positiver Brüche mit Hilfe eines binnendifferenzierten Stationenlernens zur langfristigen Sicherung der Kompetenzen am Ende der Reihe. 
+	\quad \\[1.5cm]
+	\noindent 
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabular}{|l r|}
+	\hline
+	\hline 
+	\end{tabular}
+	\end{titlepage}
+	\newpage
+	\thispagestyle{empty}
+	\tableofcontents
+	\newpage
+	%\listoffigures
+	%\thispagestyle{empty}
+	%\newpage
+	\section{Längerfristige Unterrichtszusammenhänge}
+
+\end{document}
