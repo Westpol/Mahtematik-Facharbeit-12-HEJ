@@ -1,23 +1,78 @@
-\documentclass[12pt,a4paper,draft]{article}
-
-\usepackage{hyperref}
+\documentclass[fontsize=12pt,paper=a4,DIV12,cleardoublepage=empty, 
+liststotoc,idxtotoc,bibtotoc]{article}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
 \usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{stmaryrd}
+\usepackage{colortbl}
+\usepackage{eurosym}
 \usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{lscape}
+\usepackage{pdfpages}
+%Seitenlayout
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}}
+\usepackage[left=25mm, right=25mm, bottom=30mm]{geometry}
+\usepackage[doublespacing]{setspace}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref} 
+\usepackage[figure]{hypcap}
+%Textstruktur
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+%Textaussehen
+\usepackage{framed}
+%Verzeichnisse
+\usepackage{csquotes}
+\usepackage[backend=biber, bibstyle=authoryear-ibid, uniquelist=false, maxbibnames=9, maxcitenames=3, citestyle=authoryear-icomp, isbn=true, url=true, block=space, pagetracker=page,   giveninits=false, dateabbrev=false, dashed=false ]{biblatex}
+\addbibresource{MA_literatur.bib}
+\DefineBibliographyStrings{ngerman}{ 
+	andothers = {{et\,al\adddot}},             
+} 
+\usepackage{etoolbox}
+\apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
+\setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
+\setcounter{biburlucpenalty}{9000}% Großbuchsta
+\expandafter\def\expandafter\quote\expandafter{\quote\small\singlespacing}
+
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+
+\newcommand*{\meincite}[1]{\citeauthor{#1} (\citeyear{#1})}
+
+\newcommand{\KK}{\mathbb{•}{K}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PPO}{\mathcal{P}(\Omega)}
+
+\theoremstyle{plain}
+\newtheorem{satz}{Satz}[subsection]
+\newtheorem{lem}[satz]{Lemma}
+\newtheorem{theo}[satz]{Theorem}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{defi}{Definition}
+\theoremstyle{definition}
+\newtheorem{bei}[satz]{Beispiel}
+\newtheorem{bem}[satz]{Bemerkung}
 
 \begin{document}
 
-\title{Fundamentalsatz der Analysis\newline
-\newline Eine Grundlage der heutigen Mathematik}
+\title{Fundamentalsatz der Analysis\\Eine Grundlage der heutigen Mathematik}
 \author{Benno Schörmann}
 \date{18.03.2022}
 
 \maketitle
-Hier ein Link: \url{https://www.youtube.com/watch?v=dQw4w9WgXcQ} \newline
 
 \begin{equation}
 	\begin{aligned}
-		\int {e}^{3}+sin({23}^{x}) \,dx & = \frac{Si({23}^{x})+{e}^{3}xlog(23)}{log(23)}\\
-		f(x) & ={e}^{x-2}-{x}^{2}\\
+		f(x) & ={e}^{x-2}-{x}^{2}+\pi\\
 		F(x) & =\frac{{e}^{x-2}}{1}-\frac{{x}^{3}}{3}+25\\
 	\end{aligned}
 \end{equation}
