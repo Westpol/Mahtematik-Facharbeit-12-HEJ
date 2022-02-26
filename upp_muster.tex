@@ -89,9 +89,9 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	\thispagestyle{empty}
 	\tableofcontents
 	\newpage
-	\listoffigures
-	\thispagestyle{empty}
-	\newpage	
+	%\listoffigures
+	%\thispagestyle{empty}
+	%\newpage	
 	\section{Einleitung}
 	(Die Einteilung steht übrigens noch absolut nicht fest, habe sie gestern abend im Halbschlaf angefertigt) \\\\
 	In dieser Facharbeit werde ich über Den Fundamentalsatz der Analysis und die dazugehörigen Nebenpunkte schreiben.
@@ -131,6 +131,38 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	
 	
 	\section{Hauptsatz der Differential- und Integralrechnung}
+
+	\begin{satz}
+		Sei $f$ eine stetige, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
+			\begin{equation}
+				F(x)=\int_{a}^{x}f(j) dj
+			\end{equation}
+		Dann ist $F$ gleichmäßig stetig auf dem Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, und 
+			\begin{equation}
+				F'(x)=f(x)
+			\end{equation}
+		Für alle $x$ in $(a, b)$, sodass $F$ ein Gegendifferential von $f$ ist.\\\\
+	\end{satz}
+	
+	\begin{satz}
+		Der Hauptsatz wird oftmals benutzt, um das Integral einer Funktion $f$ zu berechnen, dessen Gegendifferential $F$ bekannt ist. Wenn $f \in \RR$, kontinuierlich auf dem Intervall $[a, b]$ und $F$ ein Gegendifferential im Intervall $[a, b]$ ist, dann
+		\begin{equation}
+			\int_{a}^{b}f(j)dj=F(b)-F(a)
+		\end{equation}
+		Dieser Satz setzt Stetigkeit auf dem ganzen Intervall voraus.\\\\
+	\end{satz}
+	
+	\begin{satz}
+	Dieser Satz wird oftmals $Zweiter Fundamentalsatz der Analysis$ oder Newton-Leibniz axiom genannt\\
+	Sei $f \in \RR$ in einem geschlossenem Intervall $[a, b]$ und $F$ ein Gegendifferential von $f$ in $(a, b)$
+	\begin{equation}
+		F'(x)=f(x)
+	\end{equation}
+	Wenn $f$ Riemann-integrierbar in $[a, b]$ ist, dann gilt
+	\begin{equation}
+		\int_{a}^{b}f(j) dj = F(b)-F(a)
+	\end{equation}
+	\end{satz}
 	
 	\begin{theo}
 		Text
@@ -153,6 +185,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 				f'(x)&=\frac{3}{10}{x}^{2}+10x\\
 				f''(x)&=\frac{6}{10}x+10\\
 				f'''(x)&=\frac{6}{10}\\
+				f''''(x)&=0\\
 			\end{aligned}
 		\end{equation}
 

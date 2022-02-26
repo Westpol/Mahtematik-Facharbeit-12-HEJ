@@ -7,3 +7,5 @@
 *.out
 *.xml
 *.toc
+*.lof
+upp_muster.lof
