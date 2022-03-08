@@ -101,6 +101,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	\section{Geschichtliche Zusammenfassung}
 	Newton/Gauss Fight\\
 	Jahreszeiten, Semi guter Beweis am Anfang?\\
+	\footnote{Omar A. Hernandez Rodriguez (University of Puerto Rico) and Jorge M. Lopez Fernandez (University of Puerto Rico), "Teaching the Fundamental Theorem of Calculus: A Historical Reflection - Integration from Cavalieri to Darboux," Convergence (January 2012)}
 	
 	
 	
@@ -149,7 +150,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 			\begin{equation}
 				F'(x)=f(x)
 			\end{equation}
-		Für alle $x$ in $(a, b)$, sodass $F$ ein Gegendifferential von $f$ ist.Nene\\\\
+		Für alle $x$ in $(a, b)$, sodass $F$ ein Gegendifferential von $f$ ist.\\\\
 
 		Der Hauptsatz wird oftmals benutzt, um das Integral einer Funktion $f$ zu berechnen, dessen Gegendifferential $F$ bekannt ist. Wenn $f \in \RR$, kontinuierlich auf dem Intervall $[a, b]$ und $F$ ein Gegendifferential im Intervall $[a, b]$ ist, dann
 		\begin{equation}
@@ -194,10 +195,45 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\end{equation}
 		Die Umformung dieser Gleichungen gibt
 		\begin{equation}
-			\int_{a}^{x_1+\Delta x_1}f(t)dt-\int_{x_1}^{x_1+\Delta x_1}f(t)dt=\int_{x_1}^{x_1+\Delta x_1}f(t)dt
+			\int_{a}^{x_1+\Delta x_1}f(t)dt-\int_{a}^{x_1}f(t)dt=\int_{x_1}^{x_1+\Delta x_1}f(t)dt
 		\end{equation}
-	
+		Nun wird die Gleichung (n) eingesetzt.
+		\begin{equation}
+			F(x_1+\Delta x)-F(x_1)=\int_{x_1}^{x_1+\Delta x}f(t)dt
+		\end{equation}
+		Laut dem Mittelwertsatz gibt es eine Zahl c in $[x_1, x_1+\Delta x]$, sodass
+		\begin{equation}
+			\int_{x_1}^{x_1+\Delta x}f(t)dt=f(c)*\Delta x
+		\end{equation}
+		Nun wird die Gleichung (n) eingesetzt
+		\begin{equation}
+			F(x_1+\Delta x)-F(x_1)=f(c)*\Delta x
+		\end{equation}
+		Nun wird die Gleichung durch $\Delta x$ dividiert
+		\begin{equation}
+			\frac{F(x_1+\Delta x)-F(x_1)}{\Delta x}=f(c)
+		\end{equation}
+		Auffallend ist, dass auf die linke Seite zu einem Differenzeinquotienten umgeformt wurde. Wird nun $\lim \limits_{\Delta x \to 0}$ angewandt, dann
+		\begin{equation}
+			\lim \limits_{\Delta x \to 0} \frac{F(x_1+\Delta x)-F(x_1)}{\Delta x}=\lim \limits_{\Delta x \to 0}f(c)
+		\end{equation}
+		Und somit
+		\begin{equation}
+			F'(x_1)=\lim \limits_{\Delta x \to 0}f(c)
+		\end{equation}
+		Nun fehlt nur noch $f(c)$. Da $x_1 \leq c \leq x_1+\Delta x$ und $\Delta x$ gegen $0$ läuft wird sich $c\to$ $x_1$ nähern bis bei $\Delta x=0$ auch $c = x_1$ ist.\\Zusammenfassend ist also
+		\begin{equation}
+			\lim \limits_{\Delta x \to 0} f(c) = f(x_1)
+		\end{equation}
+		Und somit
+		\begin{equation}
+			F'(x_1)=f(x_1)
+		\end{equation}
+		Damit ist der erste Satz der Differential- und Integralrechnung bewiesen.
 	\end{proof}
+	
+	\subsection{Korollar}
+		
 	
 	\section{Auswirkungen auf die Mathematik}
 	Brüche kann man auf diese weise kürzen:
