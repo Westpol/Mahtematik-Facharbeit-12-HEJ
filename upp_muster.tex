@@ -122,7 +122,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		Text
 
 
-	\subsection{Wie wird eine Funktion integriert?}
+	\subsubsection{Wie wird eine Funktion integriert?}
 		Text
 		
 	
@@ -130,7 +130,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		Text
 		
 	
-	\subsection{Was ist eine Stetige Funktion?}
+	\subsection{Was ist eine kontinuierliche Funktion?}
 		Text	
 	
 	
@@ -142,11 +142,11 @@ liststotoc,idxtotoc,bibtotoc]{article}
 
 	\subsection{Erster Satz}
 	\begin{satz}
-		Sei $f$ eine stetige, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
+		Sei $f$ eine kontinuierliche, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
 			\begin{equation}
 				F(x)=\int_{a}^{x}f(t) dt
 			\end{equation}
-		Dann ist $F$ gleichmäßig stetig auf dem Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, und 
+		Dann ist $F$ gleichmäßig kontinuierlich auf dem Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, und 
 			\begin{equation}
 				F'(x)=f(x)
 			\end{equation}
@@ -156,7 +156,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation}
 			\int_{a}^{b}f(t) dt=F(b)-F(a)
 		\end{equation}
-		Dieser Satz setzt Stetigkeit auf dem ganzen Intervall voraus.\\\\
+		Dieser Satz setzt Kontinuität auf dem ganzen Intervall voraus.\\\\
 	
 	Dieser Satz wird oftmals $Zweiter Fundamentalsatz der Analysis$ oder Newton-Leibniz axiom genannt\\
 	Sei $f \in \RR$ in einem geschlossenem Intervall $[a, b]$ und $F$ ein Gegendifferential von $f$ in $(a, b)$
@@ -207,7 +207,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\end{equation}
 		Nun wird die Gleichung (n) eingesetzt
 		\begin{equation}
-			F(x_1+\Delta x)-F(x_1)=f(c)*\Delta x
+			F(x_1+\Delta x)-F(x_1)=f(c)*\Delta x \;\;\;\;|\div \Delta x
 		\end{equation}
 		Nun wird die Gleichung durch $\Delta x$ dividiert
 		\begin{equation}
@@ -231,22 +231,15 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\end{equation}
 		Damit ist der erste Satz der Differential- und Integralrechnung bewiesen.
 	\end{proof}
+	\newpage
 	
 	\subsection{Korollar}
+	\begin{satz}
+		
+	\end{satz}
 		
 	
 	\section{Auswirkungen auf die Mathematik}
-	Brüche kann man auf diese weise kürzen:
-		\begin{equation}
-			\begin{aligned}
-				F(x)&=\frac{{x}^{4}}{30}+\frac{2}{5}{x}^{3}\\
-				f(x)&=\frac{{x}^{3}}{10}+5{x}^{2}\\
-				f'(x)&=\frac{3}{10}{x}^{2}+10x\\
-				f''(x)&=\frac{6}{10}x+10\\
-				f'''(x)&=\frac{6}{10}\\
-				f''''(x)&=0\\
-			\end{aligned}
-		\end{equation}
 
 
 \end{document}
