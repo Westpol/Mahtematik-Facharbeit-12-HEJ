@@ -130,7 +130,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		Text
 		
 	
-	\subsection{Was ist eine kontinuierliche Funktion?}
+	\subsection{Was ist eine stetige Funktion?}
 		Text	
 	
 	
@@ -142,24 +142,24 @@ liststotoc,idxtotoc,bibtotoc]{article}
 
 	\subsection{Erster Satz}
 	\begin{satz}
-		Sei $f$ eine kontinuierliche, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
+		Sei $f$ eine stetige, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
 			\begin{equation}
 				F(x)=\int_{a}^{x}f(t) dt
 			\end{equation}
-		Dann ist $F$ gleichmäßig kontinuierlich auf dem Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, und 
+		Dann ist $F$ gleichmäßig stetig auf dem Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, und 
 			\begin{equation}
 				F'(x)=f(x)
 			\end{equation}
-		Für alle $x$ in $(a, b)$, sodass $F$ ein Gegendifferential von $f$ ist.\\\\
+		Für alle $x$ in $(a, b)$, sodass $F$ eine Stammfunktion von $f$ ist.\\\\
 
-		Der Hauptsatz wird oftmals benutzt, um das Integral einer Funktion $f$ zu berechnen, dessen Gegendifferential $F$ bekannt ist. Wenn $f \in \RR$, kontinuierlich auf dem Intervall $[a, b]$ und $F$ ein Gegendifferential im Intervall $[a, b]$ ist, dann
+		Der Hauptsatz wird oftmals benutzt, um das Integral einer Funktion $f$ zu berechnen, dessen Stammfunktion $F$ bekannt ist. Wenn $f \in \RR$, stetig auf dem Intervall $[a, b]$ und $F$ eine Stammfunktion im Intervall $[a, b]$ ist, dann
 		\begin{equation}
 			\int_{a}^{b}f(t) dt=F(b)-F(a)
 		\end{equation}
-		Dieser Satz setzt Kontinuität auf dem ganzen Intervall voraus.\\\\
+		Dieser Satz setzt Stetigkeit auf dem ganzen Intervall voraus.\\\\
 	
 	Dieser Satz wird oftmals $Zweiter Fundamentalsatz der Analysis$ oder Newton-Leibniz axiom genannt\\
-	Sei $f \in \RR$ in einem geschlossenem Intervall $[a, b]$ und $F$ ein Gegendifferential von $f$ in $(a, b)$
+	Sei $f \in \RR$ in einem geschlossenem Intervall $[a, b]$ und $F$ eine Stammfunktion von $f$ in $(a, b)$
 	\begin{equation}
 		F'(x)=f(x)
 	\end{equation}
@@ -235,8 +235,23 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	
 	\subsection{Korollar}
 	\begin{satz}
-		
+		|\\Sei $f(x), x \to \in \RR$ eine stetige Funktion auf dem Intervall $[a, b]$ und $F$ eine Stammfunktion von $f$ im Intervall $[a, b]$, dann gilt
+		\begin{equation}
+			\int_{a}^{b}f(t)dt=F(b)-F(a)
+		\end{equation}
+		Das Korollar erfordert Stetigkeit auf dem ganzen Intervall.
 	\end{satz}
+
+	\begin{proof}
+		Sei $F$ ein Stammfunktion von $f$ mit Stetigkeit auf dem Intervall $[a, b]$, dann sei
+		\begin{equation}
+			G(x)=\int_{a}^{x}f(t)dt
+		\end{equation}
+		Durch den ersten Beweis ist bewiesen, dass $G(x)$ eine Stammfunktion von f ist. Da $F'(x)-G'(x)=0$ ist der Mittelwertsatz impliziert, dass $F(x)-G(x)$ eine konstante Funktion ist, das heißt es gibt eine Zahl $c$, so dass $G(x)=F(x)+c$ für alle $x$ in $[a, b]$. Es gilt also
+		\begin{equation}
+			F(x)+c=G(x)=\int_{x}^{x}f(t)dt=0
+		\end{equation}
+	\end{proof}
 		
 	
 	\section{Auswirkungen auf die Mathematik}
