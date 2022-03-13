@@ -140,8 +140,8 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	
 	Der Hauptsatz der Dieefrential- und Integralrechnung ist in zwei Hauptsätze und einen Nebensatz aufgeteilt. Der erste Satz stellt den Zusammenhang zwischen Integral und Differential dar.
 
-	\subsection{Erster Satz}
-	\begin{satz}
+	\subsection{Erster Teil}
+	\begin{satz}" "\\
 		Sei $f$ eine stetige, der Zahlenmenge $\RR$ angehörige Funktion in einem geschlossenen Intervall $[a, b]$. Sei $F$ definiert für alle $x$ im Intervall $[a, b]$ durch \\
 			\begin{equation}
 				F(x)=\int_{a}^{x}f(t) dt
@@ -171,9 +171,9 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	\end{satz}
 	
 	
-	\begin{proof}
+	\begin{proof}" "\\
 	
-		|\\Für ein gegebenes $f(t)$ sei die Funktion $F(x)$ definiert als
+		Für ein gegebenes $f(t)$ sei die Funktion $F(x)$ definiert als
 		\begin{equation}
 			F(x)=\int_{a}^{x}f(t)dt
 		\end{equation}
@@ -229,20 +229,24 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation}
 			F'(x_1)=f(x_1)
 		\end{equation}
+		Eine andere Schreibweise wäre
+		\begin{equation}
+			\frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)
+		\end{equation}
 		Damit ist der erste Satz der Differential- und Integralrechnung bewiesen.
 	\end{proof}
-	\newpage
+	%\newpage
 	
 	\subsection{Korollar}
-	\begin{satz}
-		|\\Sei $f(x), x \to \in \RR$ eine stetige Funktion auf dem Intervall $[a, b]$ und $F$ eine Stammfunktion von $f$ im Intervall $[a, b]$, dann gilt
+	\begin{satz}" "\\
+		Sei $f(x), x \to \in \RR$ eine stetige Funktion auf dem Intervall $[a, b]$ und $F$ eine Stammfunktion von $f$ im Intervall $[a, b]$, dann gilt
 		\begin{equation}
 			\int_{a}^{b}f(t)dt=F(b)-F(a)
 		\end{equation}
 		Das Korollar erfordert Stetigkeit auf dem ganzen Intervall.
 	\end{satz}
 
-	\begin{proof}
+	\begin{proof}" "\\
 		Sei $F$ ein Stammfunktion von $f$ mit Stetigkeit auf dem Intervall $[a, b]$, dann sei
 		\begin{equation}
 			G(x)=\int_{a}^{x}f(t)dt
@@ -253,6 +257,47 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\end{equation}
 	\end{proof}
 		
+		
+	\subsection{Zweiter Teil}
+	
+	\begin{satz}
+	
+	\end{satz}	
+	
+	\begin{proof} " "\\
+	Dies ist ein Grenzbeweis durch die Riemann-Summe. Sei $f$ Riemann-integrierbar auf dem Intervall $[a, b]$ und lasse $f$ eine Stammfunktion $F$ auf dem Intervall $[a,b]$ zu. $F(b)-F(a)$. Seien $x_0 \cdots x_n$, sodass
+	\begin{equation}
+		a = x_0 < x_1 < x_2 < \cdots < x_{n-2} < x_{n-1} < x_n = b
+	\end{equation}
+	Daraus lässt sich erschließen, dass
+	\begin{equation}
+		F(b)-F(a)=F(x_n)-F(x_0)
+	\end{equation}
+	Nun wird jedes $F(x_k)$ zusammen mit seinem negativen gegenpart addiert, sodass die daraus ergebende menge folgendes ergibt
+	\begin{multline}
+	\begin{aligned}
+		F(b)-F(a)=& F(x_n)+[-F(x_{n-1})+F(x_{n-1})]+[-F(x_{n-2})+F(x_{n-2})]+\cdots +\\ &[-F(x_2)+F(x_2)]+[-F(x_1)+F(x_1)]-F(x_0)\\
+		=& [F(x_n)-F(x_{n-1})]+[F(x_{n-1})-F(x_{n-2})]+\cdots+[F(x_2)-F(x_1)]+[F(x_1)-F(x_0)]
+	\end{aligned}
+	\end{multline}
+	Die obere Menge kann folgendermaßen zusammengefasst werden
+	\begin{equation}
+		F(b)-F(a)=\sum_{k=1}^{n} [F(x_k)-F(x_{k-1})]
+	\end{equation}
+	Als nächstes wird der Mittelwertsatz benötigt. Kurz zusammengefasst:\\
+	Sei $F$ stetig auf dem geschlossenen Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, dann existiert ein $c$ im Intervall $(a, b)$, sodass
+	\begin{equation}
+		F'(c)=\frac{F(b)-F(a)}{b-a}
+	\end{equation}
+	Daraus folgt
+	\begin{equation}
+		F'(c)(b-a)=F(b)-F(a)
+	\end{equation}
+	
+	
+	\end{proof}
+	
+	
 	
 	\section{Auswirkungen auf die Mathematik}
 
