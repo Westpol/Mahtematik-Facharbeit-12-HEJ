@@ -9,3 +9,5 @@
 *.toc
 *.lof
 upp_muster.lof
+*.bbl
+*.blg
