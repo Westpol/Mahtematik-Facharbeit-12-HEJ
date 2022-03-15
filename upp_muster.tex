@@ -30,9 +30,9 @@ liststotoc,idxtotoc,bibtotoc]{article}
 \usepackage{csquotes}
 \usepackage[backend=biber, bibstyle=authoryear-ibid, uniquelist=false, maxbibnames=9, maxcitenames=3, citestyle=authoryear-icomp, isbn=true, url=true, block=space, pagetracker=page,   giveninits=false, dateabbrev=false, dashed=false ]{biblatex}
 \addbibresource{MA_literatur.bib}
-%\DefineBibliographyStrings{ngerman}{ 
-%	andothers = {{et\,al\adddot}},             
-%} 
+\DefineBibliographyStrings{ngerman}{ 
+	andothers = {{et\,al\adddot}},             
+} 
 \usepackage{etoolbox}
 \apptocmd{\UrlBreaks}{\do\f\do\m}{}{}
 \setcounter{biburllcpenalty}{9000}% Kleinbuchstaben
@@ -61,6 +61,8 @@ liststotoc,idxtotoc,bibtotoc]{article}
 \theoremstyle{definition}
 \newtheorem{bei}[satz]{Beispiel}
 \newtheorem{bem}[satz]{Bemerkung}
+
+\graphicspath{ {./images/} }
 
 \begin{document}
 	\definecolor{gold}{rgb}{0.9,0.9,0}
@@ -174,13 +176,19 @@ liststotoc,idxtotoc,bibtotoc]{article}
 			F(x_1+\Delta x)-F(x_1)=\int_{a}^{x_1+\Delta x}f(t)dt-\int_{a}^{x_1}f(t)dt
 		\end{equation}
 		Die Summe beider Flächen ist
-		\begin{equation}
+		\begin{equation*}
 			\int_{a}^{x_1}f(t)dt + \int_{x_1}^{x_1+\Delta x}f(t)dt = \int_{a}^{x_1+\Delta x}f(t)dt
-		\end{equation}
+		\end{equation*}
+		\includegraphics[scale=0.2]{Integral 0-4.png} $+$
+		\includegraphics[scale=0.2]{Integral 4-5.png} $=$
+		\includegraphics[scale=0.2]{Integral 0-5.png} \\
 		Die Umformung dieser Gleichungen gibt
-		\begin{equation}
+		\begin{equation*}
 			\int_{a}^{x_1+\Delta x}f(t)dt-\int_{a}^{x_1}f(t)dt=\int_{x_1}^{x_1+\Delta x}f(t)dt
-		\end{equation}
+		\end{equation*}
+		\includegraphics[scale=0.2]{Integral 0-5.png} $-$
+		\includegraphics[scale=0.2]{Integral 0-4.png} $=$
+		\includegraphics[scale=0.2]{Integral 4-5.png} \\
 		Nun wird die Gleichung (1) eingesetzt.
 		\begin{equation}
 			F(x_1+\Delta x)-F(x_1)=\int_{x_1}^{x_1+\Delta x}f(t)dt
@@ -189,7 +197,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation}
 			\int_{x_1}^{x_1+\Delta x}f(t)dt=f(c)*\Delta x
 		\end{equation}
-		Nun wird die Gleichung (4) und (5) zusammengefügt und durch $\Delta x$ dividiert
+		Nun wird die Gleichung (2) und (3) zusammengefügt und durch $\Delta x$ dividiert
 		\begin{equation*}
 			F(x_1+\Delta x)-F(x_1)=f(c)*\Delta x \;\;\;\;|\div \Delta x
 		\end{equation*}
@@ -208,7 +216,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation}
 			\lim \limits_{\Delta x \to 0} f(c) = f(x_1)
 		\end{equation}
-		Und somit, wenn man (6) und (7) zusammenfügt
+		Und somit, wenn man (4) und (5) zusammenfügt
 		\begin{equation*}
 			F'(x_1)=f(x_1)
 		\end{equation*}
