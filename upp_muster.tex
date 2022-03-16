@@ -103,8 +103,9 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	\section{Geschichtliche Zusammenfassung}
 	Newton/Gauss Fight\\
 	Jahreszeiten, Semi guter Beweis am Anfang?\\
-	\footnote{Omar A. Hernandez Rodriguez (University of Puerto Rico) and Jorge M. Lopez Fernandez (University of Puerto Rico), "Teaching the Fundamental Theorem of Calculus: A Historical Reflection - Integration from Cavalieri to Darboux," Convergence (Januar 2012)}
-	
+	%\footnote{Omar A. Hernandez Rodriguez (University of Puerto Rico) and Jorge M. Lopez Fernandez (University of Puerto Rico), "Teaching the Fundamental Theorem of Calculus: A Historical Reflection - Integration from Cavalieri to Darboux," Convergence (Januar 2012)}
+	Gute Quelle \footnote{Bressoud, D. (2011). “Historical reflections on teaching the fundamental theorem of integral calculus.” The American Mathematical Monthly, 118(2), 99-115}
+	%\footnote{https://simple.wikipedia.org/wiki/Fundamental_theorem_of_calculus}
 	
 	
 
@@ -278,6 +279,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 		\begin{equation*}
 			\int_{a}^{b}f(t)dt=G(b)=F(b)-F(a)
 		\end{equation*}
+		Somit ist das Korollar des Hauptsatzes der Differential- und Integralrechnung bewiesen.
 	\end{proof}	
 	\newpage
 	
@@ -316,11 +318,11 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	\end{aligned}
 	\end{multline*}
 	Die obere Menge kann folgendermaßen zusammengefasst werden
-	\begin{equation*}
+	\begin{equation}
 		F(b)-F(a)=\sum_{k=1}^{n} [F(x_k)-F(x_{k-1})]
-	\end{equation*}
+	\end{equation}
 	Als nächstes wird der Mittelwertsatz der Integralrechnung benötigt. Kurz zusammengefasst:\\
-	Sei $F$ stetig auf dem geschlossenen Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, dann existiert ein $c$ im Intervall $(a, b)$, sodass  [\cite{Lee2009a}]
+	Sei $F$ stetig auf dem geschlossenen Intervall $[a, b]$ und differenzierbar auf dem offenen Intervall $(a, b)$, dann existiert ein $c$ im Intervall $(a, b)$, sodass 
 	\begin{equation*}
 		F'(c)=\frac{F(b)-F(a)}{b-a}
 	\end{equation*}
@@ -328,8 +330,32 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	\begin{equation*}
 		F'(c)(b-a)=F(b)-F(a)
 	\end{equation*}
-	
-	
+	$F$ ist differenzierbar auf dem Intervall $[a, b]$ und somit auch differenzierbar auf dem Intervall $[x_{k-1}, x_k]$. Laut dem Mittelwertsatz der Integralrechnung ergibt sich somit
+	\begin{equation}
+		F(x_k)-F(x_{k-1})=F'(c_k)(x_k-x_{k-1})
+	\end{equation}
+	Nun wird das Ergebnis von (7) in die Gleichung von (6) eingesetzt
+	\begin{equation*}
+		F(b)-F(a)=\sum_{k=1}^{n} [F'(c_k)(x_k-x_{k-1})]
+	\end{equation*}
+	Vorausgesetzt wird, dass $F'(c_k)=f(c_k)$ ist. Außerdem kann einfachheitshalber $(x_k-x_{k-1})$ als $\Delta x$ des Teils $k$ geschrieben werden, also $\Delta x_k$
+	\begin{equation}
+		F(b)-F(a)=\sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
+	\end{equation}
+	--add text--\\
+	Nun wird Limes $\Delta x_k \to 0$ angewendet. Dies bewirkt, dass die Einteilungen, auch Partitionen genannt, gen 0 gehen und die Genauigkeit des Intervalls immer besser wird, da es immer weniger Überschuss oder Ungenauigkeiten gibt.
+	\begin{equation*}
+		\lim \limits_{\Delta x_k \to 0} F(b)-F(a)=\lim \limits_{\Delta x_k \to 0} \sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
+	\end{equation*}
+	Da $F(b)-F(a)$ kein $\Delta x_k$ beinhaltet bleibt diese Seite der Gleichung unverändert bestehen und somit bleibt
+	\begin{equation*}
+		F(b)-F(a)=\lim \limits_{\Delta x_k \to 0} \sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
+	\end{equation*}
+	Die rechte Seite der Gleichung definiert das Integral von $f$ von $a$ bis $b$. Somit ergibt sich
+	\begin{equation*}
+		F(b)-F(a)=\int_{a}^{b}f(x)dx
+	\end{equation*}
+	Somit ist der Zweite Teil des Hauptsatzes der Differential- und Integralrechnung bewiesen.
 	\end{proof}
 	
 	
