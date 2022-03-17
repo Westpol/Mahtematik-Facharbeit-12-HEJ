@@ -102,7 +102,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	
 	\section{Geschichtliche Zusammenfassung}
 	Genutzte Quellen: [\cite[vgl.]{DMB}]\\
-	Die Geschichte des Hauptsatzes der Differential- und Integralrechnung beginnt im 17. Jahrhundert mit Gottfried Leibnitz und Isaac Newton. Leibnitz sah das Integral als eine unendlich große Menge an Flächen die unendlich klein sind. Damit zeigte er den wichtigen Zusammenhang zwischen Integration und Fläche. Isaac Newton nutzte die Geometrie, um den Unterschied zwischen Distanz, Geschwindigkeit und Beschleunigung zu beschreiben. Das ist der Schlüssel, um das Verhältnis zwischen Integral und Ableitung zu verstehen. Krümmung ist die Ableitung von Steigung und Steigung ist die Ableitung von Strecke/Distanz. Distanz ist hingegen das Integral von Steigung und Steigung ist das Integral von Krümmung. 1823 hat Cauchy das Integral per Limes definiert. Im 19. Jahrhundert beschrieb Siméon Denis Poisson das bestimmte Integral als die Differenz der Stammfunktion [F(b)-F(a)]. Um 1950 wurden die Theorien zu einem Hauptsatz der Differential- und Integralrechnung zusammengefasst.
+	Die Geschichte des Hauptsatzes der Differential- und Integralrechnung beginnt im 17. Jahrhundert mit Gottfried Leibniz und Isaac Newton. Leibniz sah das Integral als eine unendlich große Menge an Flächen die unendlich klein sind. Damit zeigte er den wichtigen Zusammenhang zwischen Integration und Fläche. Isaac Newton nutzte die Geometrie, um den Unterschied zwischen Distanz, Geschwindigkeit und Beschleunigung zu beschreiben. Das ist der Schlüssel, um das Verhältnis zwischen Integral und Ableitung zu verstehen. Krümmung ist die Ableitung von Steigung und Steigung ist die Ableitung von Strecke/Distanz. Distanz ist hingegen das Integral von Steigung und Steigung ist das Integral von Krümmung. 1823 hat Cauchy das Integral per Limes definiert. Im 19. Jahrhundert beschrieb Siméon Denis Poisson das bestimmte Integral als die Differenz der Stammfunktion [F(b)-F(a)]. Um 1950 wurden die Theorien zu einem Hauptsatz der Differential- und Integralrechnung zusammengefasst.
 \newpage
 	
 	
@@ -131,10 +131,32 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		%Text	
 	
 	\section{Riemann-Integral}	
-	\begin{satz}
-	
-	\end{satz}
-	\newpage
+	Flächen von Funktionen können mit dem Riemann-Integral approximiert werden. Dies geschieht, indem das Intervall $[a, b]$ in viele kleinere Partitionen $[x_0, x_1, x_2 \cdots x_{k-2}, x_{k-1}, x_k]$ unterteilt wird, wobei $x_0 = a$, $x_k = b$ und $[x_0 < x_1 < x_2 < \cdots < x_{k-2} < x_{k-1} < x_k]$. Bei gegebener Funktion $f \in \RR$ wird nun die Höhe von $f(x_k)$ oder $f(x_{k-1})$ mit der Breite $(x_k-x_{k-1})$ oder einfachheitshalber $\Delta x$ multipliziert. Nun wird entweder nur der höchste Wert zwischen $f(x_k)$ und $f(x_{k-1})$ ausgewählt, was die Obersumme wäre oder der tiefste Wert zwischen $f(x_k)$ und $f(x_{k-1})$ ausgewählt, was die Untersumme wäre.\\
+	 In Form einer Gleichung bedeutet das
+	\begin{equation*}
+		O(Z)= \sum_{k=1}^{n} [(\Delta x)* \sup_{x_{k-1} \leq x \leq x_k} f(x)]
+	\end{equation*}
+	\begin{equation*}
+		U(Z)= \sum_{k=1}^{n} [(\Delta x)* \inf_{x_{k-1} \leq x \leq x_k} f(x)]
+	\end{equation*}
+	Da, wie im unteren Bild zu sehen ist, der Graph ausschließlich zwischen der Ober- und Untersumme verläuft können mehrere Schlüsse gezogen werden. Erstens ist das Integral irgendein Wert zwischen Ober- und Untergrenze und somit eingegrenzt mit einer bekannten Ungenauigkeit. Zweitens, wenn Obergrenze = Untergrenze ist, ist das Integral exakt bestimmt, da der Bereich zwischen Ober- und Untergrenze gleich 0 ist, was bedeutet, dass der Graph exakt zwischen den Grenzen verläuft. \\Eine andere Schreibart für die Untergrenze ist
+	\begin{equation*}
+	\underline{\int _{a}^{b}}f(x)dx
+	\end{equation*}
+	Eine andere Schreibart für die Obergrenze ist
+	\begin{equation*}
+	\overline{\int _{a}^{b}}f(x)dx
+	\end{equation*}
+	Somit folgt aus der oberen Feststellung, dass wenn
+	\begin{equation*}
+		\underline{\int _{a}^{b}}f(x)dx = \overline{\int _{a}^{b}}f(x)dx
+	\end{equation*}
+	dann
+	\begin{equation*}
+		\underline{\int _{a}^{b}}f(x)dx = \overline{\int _{a}^{b}}f(x)dx = \int_{a}^{b}f(x)dx
+	\end{equation*}
+	\\\\ Hier ein bildliches Beispiel der Ober- und Untersummen:\\
+	\includegraphics[scale=0.3]{Riemann.png}
 	
 	
 	\section{Mittelwertsatz der Integralrechnung}
@@ -144,12 +166,12 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation*}
 			\int_{a}^{b}f(t)g(t)dt=f(\xi)\int_{a}^{b}g(t)dt			
 		\end{equation*}
-		Die obrige Aussage wird auch als erweiteter Mittelwertsatz bezeichnet. Wenn allerdings $g=1$ ist, kommt es zu einem spezialgelagerten Sonderfall\\
+		Die obige Aussage wird auch als erweiterter Mittelwertsatz bezeichnet. Wenn allerdings $g=1$ ist, kommt es zu einem Spezialfall\\
 		%\includegraphics[scale=0.3]{Mittelwertsatz xTo2.png}
 		\begin{equation*}
 			\int_{a}^{b}f(t)dt=f(\xi)(b-a)
 		\end{equation*}
-		Wenn man die rechte seite der Gleichung bertachtet, fällt auf, dass dort der eines Rechtecks gebildet wird. Dieses Rechteck hat die gleiche Fläche wie das Integral zwischen $a$ und $b$.		
+		Wenn die rechte Seite der Gleichung betrachtet wird, fällt auf, dass dort der eines Rechtecks gebildet wird. Dieses Rechteck hat die gleiche Fläche wie das Integral zwischen $a$ und $b$.		
 		
 	\end{satz}
 	
@@ -159,7 +181,22 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation*}
 			k \int_{a}^{b}g(x)dx \leq \int_{a}^{b}f(x)g(x)dx\leq K\int_{a}^{b}g(x)dx
 		\end{equation*}
-		
+		Es gilt nun zwischen zwei Fällen zu unterscheiden.\\
+		\textbf{Fall 1:} $\int_{a}^{b}g(x)dx \neq 0$, dann
+		\begin{equation*}
+			f(\xi)=\frac{1}{\int_{a}^{b}g(x)dx}\int_{a}^{b}f(x)g(x)dx
+		\end{equation*}
+		Die rechte Seite dieser Gleichung ist eine Zahl, und zu zeigen ist, dass $f$ für ein $\xi \in [a, b]$ diese Zahl als Wert annimmt.\\	
+		Wegen $g(x) \geq 0$ ist $\int_{a}^{b}g(x)dx > 0$ und hat nach der Division durch $\int_{a}^{b}g(x)dx$ die Form
+		\begin{equation*}
+			k \leq \frac{1}{\int_{a}^{b}g(x)dx}\int_{a}^{b}f(x)g(x)dx \leq K
+		\end{equation*}
+		hieraus folgt mit dem Zwischenwertsatz für stetige Funktionen, q. e. d.\\
+		\textbf{Fall 2:} $\int_{a}^{b}g(x)dx = 0$, dann 
+		\begin{equation*}
+			 \int_{a}^{b}f(x)g(x)dx = 0
+		\end{equation*}
+		und die Behauptung gewinnt die für jedes $\xi \in [a, b]$ gültige Form.
 	\end{proof}
 	\newpage
 	
@@ -205,7 +242,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\includegraphics[scale=0.2]{Integral 0-4.png} $+$
 		\includegraphics[scale=0.2]{Integral 4-5.png} $=$
 		\includegraphics[scale=0.2]{Integral 0-5.png} \\
-		Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 bis 4 und 4 bis 5 addiert, dann ergibt das die Fläche des Integrals von 0 bis 5. Generell ausgedrückt ist das also
+		Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 bis 4 und 4 bis 5 addiert werden, dann ergibt das die Fläche des Integrals von 0 bis 5. Generell ausgedrückt ist das also
 		\begin{equation*}
 			\int_{a}^{b}f(t)dt + \int_{b}^{c}f(t)dt = \int_{a}^{c}f(t)dt
 		\end{equation*}
@@ -217,7 +254,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\includegraphics[scale=0.2]{Integral 0-5.png} $-$
 		\includegraphics[scale=0.2]{Integral 0-4.png} $=$
 		\includegraphics[scale=0.2]{Integral 4-5.png} \\
-Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 bis 5 und 0 bis 4 miteinander subtrahiert, dann ergibt das die Fläche des Integrals von 4 bis 5. Generell ausgedrückt ist das also
+Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 bis 5 und 0 bis 4 voneinander subtrahiert werden, dann ergibt das die Fläche des Integrals von 4 bis 5. Generell ausgedrückt ist das also
 		\begin{equation*}
 			\int_{a}^{c}f(t)dt - \int_{a}^{b}f(t)dt = \int_{b}^{c}f(t)dt
 		\end{equation*}
@@ -226,7 +263,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 		\begin{equation}
 			F(x_1+\Delta x)-F(x_1)=\int_{x_1}^{x_1+\Delta x}f(t)dt
 		\end{equation}
-		Laut dem Mittelwertsatz der Integralrechung gibt es eine Zahl c in $[x_1, x_1+\Delta x]$, sodass
+		Laut dem Mittelwertsatz der Integralrechnung gibt es eine Zahl c in $[x_1, x_1+\Delta x]$, sodass
 		\begin{equation}
 			\int_{x_1}^{x_1+\Delta x}f(t)dt=f(c)*\Delta x
 		\end{equation}
@@ -249,7 +286,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 		\begin{equation}
 			\lim \limits_{\Delta x \to 0} f(c) = f(x_1)
 		\end{equation}
-		Und somit, wenn man (4) und (5) zusammenfügt
+		Und somit, wenn (4) und (5) zusammenfügt werden
 		\begin{equation*}
 			F'(x_1)=f(x_1)
 		\end{equation*}
@@ -349,7 +386,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 		F(b)-F(a)=\sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
 	\end{equation}
 	\newpage
-Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Breite $\Delta x$ und Höhe $f(c_k)$ beschrieben. Diese Fläche ist eine Annäherung der Fläche unter dem Graphen $f$ jeder Partition. Jede einzelne Partition wird nun addiert, um sich der Fläche unter der Funktion $f$ im Intervall $[a, b]$ anzunähern. Je kleiner $\Delta x$ wird, desto genauer spiegeln die Rechtecke die Fläche unter der Funktion wieder, da es weniger Unterer/Überschuss gibt. Wenn in der Theorie $\Delta x = 0$ erreicht ist,dann  würde die exakte Fläche herauskommen. Da in dem Falle die Höhe von $f$ aber immer mit $0$ addiert werden würde, also $0$ herauskommen würde, und $b$ niemals erreicht werden würde ist dies in der Praxis natürlich nicht umzusetzen.\\
+Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Breite $\Delta x$ und Höhe $f(c_k)$ beschrieben. Diese Fläche ist eine Annäherung der Fläche unter dem Graphen $f$ jeder Partition. Jede einzelne Partition wird nun addiert, um sich der Fläche unter der Funktion $f$ im Intervall $[a, b]$ anzunähern. Je kleiner $\Delta x$ wird, desto genauer spiegeln die Rechtecke die Fläche unter der Funktion wieder, da es weniger Unter- oder Überschuss gibt. Wenn in der Theorie $\Delta x = 0$ erreicht ist,dann  würde die exakte Fläche herauskommen. Da in dem Falle die Höhe von $f$ aber immer mit $0$ addiert werden würde, also $0$ herauskommen würde, und $b$ niemals erreicht werden würde ist dies in der Praxis natürlich nicht umzusetzen.\\
 	Deswegen wird Limes $\Delta x_k \to 0$ angewendet. Dies bewirkt, dass die Partitionen gen 0 gehen und die Genauigkeit des Intervalls immer besser wird, da es immer weniger Ungenauigkeiten gibt.
 	\begin{equation*}
 		\lim \limits_{\Delta x_k \to 0} F(b)-F(a)=\lim \limits_{\Delta x_k \to 0} \sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
@@ -368,14 +405,14 @@ Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Br
 	
 	
 	\section{Fazit}
-	joa, is halt toll gewesen, nech?
+	Die oben aufgestellten Beweise zeigen, dass Integral und Ableitung jeweils wie Plus und Minus oder Mal und Geteilt gegensätzliche Vorgehen sind, um Graphen zu analysieren. Zusätzlich wurde bewiesen, wie die Stammfunktion genutzt werden kann, um das Integral zwischen zwei Stellen mit einer Rechnung exakt zu berechnen. Die Beweise bilden Grundlegende Feststellungen, auf denen viele Themen aufbauen, die teilweise sogar außerhalb der Mathematik angewandt werden. Bei Künstlicher Intelligenz werden zum Beispiel Ableitungen benutzt, um Neuronale Netzwerke zu kalibrieren. Auch bauen viele weitere, auch mathematische Theorien auf dem Hauptsatz der Differential- und Integralrechnung auf, was den Beweis so fundamental wichtig macht.
 	\newpage
 	
 	
 	\nocite{*}
 	\printbibliography[title=Literaturverzeichnis]
 	\newpage
-	\section{Eigenständigkeitserklärung}
+	\huge Eigenständigkeitserklärung \normalsize\\
 	Ich erkläre, dass ich die Facharbeit ohne fremde Hilfe angefertigt und nur die im
 Literaturverzeichnis angeführten Quellen und Hilfsmittel benutzt habe.\\
 
