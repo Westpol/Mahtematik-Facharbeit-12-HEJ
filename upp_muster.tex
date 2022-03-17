@@ -177,7 +177,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation*}
 			\int_{a}^{b}f(t)dt=f(\xi)(b-a)
 		\end{equation*}
-		Wenn die rechte Seite der Gleichung betrachtet wird, fällt auf, dass dort der eines Rechtecks gebildet wird. Dieses Rechteck hat die gleiche Fläche wie das Integral zwischen $a$ und $b$.		
+		Wenn die rechte Seite der Gleichung betrachtet wird, fällt auf, dass dort der Flächeninhalt eines Rechtecks gebildet wird. Dieses Rechteck hat die gleiche Fläche wie das Integral zwischen $a$ und $b$.		
 		
 	\end{satz}
 	
@@ -280,7 +280,7 @@ Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 b
 		\begin{equation*}
 			\frac{F(x_1+\Delta x)-F(x_1)}{\Delta x}=f(c)
 		\end{equation*}
-		Auffallend ist, dass die linke Seite zu einem Differenzeinquotienten umgeformt wurde. Wird nun $\lim \limits_{\Delta x \to 0}$ angewandt, dann
+		Auffallend ist, dass die linke Seite zu einem Differenzenquotient umgeformt wurde. Wird nun $\lim \limits_{\Delta x \to 0}$ angewandt, dann
 		\begin{equation*}
 			\lim \limits_{\Delta x \to 0} \frac{F(x_1+\Delta x)-F(x_1)}{\Delta x}=\lim \limits_{\Delta x \to 0}f(c)
 		\end{equation*}
@@ -319,7 +319,7 @@ Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 b
 		\begin{equation*}
 			G(x)=\int_{a}^{x}f(t)dt
 		\end{equation*}
-		Durch den ersten Beweis ist bewiesen, dass $G(x)$ eine Stammfunktion von f ist. Da $F'(x)-G'(x)=0$ ist der Mittelwertsatz der Integralrechnung impliziert, dass $F(x)-G(x)$ eine konstante Funktion ist, das heißt es gibt eine Zahl $c$, so dass $G(x)=F(x)+c$ für alle $x$ in $[a, b]$. Es gilt also
+		Durch den ersten Beweis ist bewiesen, dass $G(x)$ eine Stammfunktion von f ist. Da $F'(x)-G'(x)=0$ ist, impliziert der Mittelwertsatz der Integralrechnung, dass $F(x)-G(x)$ eine konstante Funktion ist, das heißt es gibt eine Zahl $c$, so dass $G(x)=F(x)+c$ für alle $x$ in $[a, b]$. Es gilt also
 		\begin{equation*}
 			F(a)+c=G(a)=\int_{a}^{a}f(t)dt=0
 		\end{equation*}
@@ -359,7 +359,7 @@ Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 b
 		F(b)-F(a)=F(x_n)-F(x_0)
 	\end{equation*}
 	\newpage
-	Nun wird jedes $F(x_k)$ zusammen mit seinem negativen gegenpart addiert, sodass die daraus ergebende menge folgendes ergibt
+	Nun wird jedes $F(x_k)$ zusammen mit seinem negativen Gegenpart addiert, sodass die daraus ergebende Menge folgendes ergibt
 	\begin{multline*}
 	\begin{aligned}
 		F(b)-F(a)=& F(x_n)+[-F(x_{n-1})+F(x_{n-1})]+[-F(x_{n-2})+F(x_{n-2})]+\cdots +\\ &[-F(x_2)+F(x_2)]+[-F(x_1)+F(x_1)]-F(x_0)\\
@@ -392,7 +392,7 @@ Wenn, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B. 0 b
 		F(b)-F(a)=\sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
 	\end{equation}
 	\newpage
-Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Breite $\Delta x$ und Höhe $f(c_k)$ beschrieben. Diese Fläche ist eine Annäherung der Fläche unter dem Graphen $f$ jeder Partition. Jede einzelne Partition wird nun addiert, um sich der Fläche unter der Funktion $f$ im Intervall $[a, b]$ anzunähern. Je kleiner $\Delta x$ wird, desto genauer spiegeln die Rechtecke die Fläche unter der Funktion wieder, da es weniger Unter- oder Überschuss gibt. Wenn in der Theorie $\Delta x = 0$ erreicht ist,dann  würde die exakte Fläche herauskommen. Da in dem Falle die Höhe von $f$ aber immer mit $0$ addiert werden würde, also $0$ herauskommen würde, und $b$ niemals erreicht werden würde ist dies in der Praxis natürlich nicht umzusetzen.\\
+Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Breite $\Delta x$ und Höhe $f(c_k)$ beschrieben. Diese Fläche ist eine Annäherung der Fläche unter dem Graphen $f$ jeder Partition. Jede einzelne Partition wird nun addiert, um sich der Fläche unter der Funktion $f$ im Intervall $[a, b]$ anzunähern. Je kleiner $\Delta x$ wird, desto genauer spiegeln die Rechtecke die Fläche unter der Funktion wieder, da es weniger Unter- oder Überschuss gibt. Wenn in der Theorie $\Delta x = 0$ erreicht ist, dann  würde die exakte Fläche herauskommen. Da in dem Falle die Höhe von $f$ aber immer mit $0$ addiert werden würde, also $0$ herauskommen würde, und $b$ niemals erreicht werden würde ist dies in der Praxis natürlich nicht umzusetzen.\\
 	Deswegen wird Limes $\Delta x_k \to 0$ angewendet. Dies bewirkt, dass die Partitionen gen 0 gehen und die Genauigkeit des Intervalls immer besser wird, da es immer weniger Ungenauigkeiten gibt.
 	\begin{equation*}
 		\lim \limits_{\Delta x_k \to 0} F(b)-F(a)=\lim \limits_{\Delta x_k \to 0} \sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
