@@ -101,10 +101,8 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	
 	
 	\section{Geschichtliche Zusammenfassung}
-	%Newton/Gauss Fight\\
-	%Jahreszeiten, Semi guter Beweis am Anfang?\\
-	%\footnote{Omar A. Hernandez Rodriguez (University of Puerto Rico) and Jorge M. Lopez Fernandez (University of Puerto Rico), "Teaching the Fundamental Theorem of Calculus: A Historical Reflection - Integration from Cavalieri to Darboux," Convergence (Januar 2012)}
-	Die Geschichte des Hauptsatzes der Differential- und Integralrechnung beginnt im 17. Jahrhundert mit Gottfried Leibnitz und Isaac Newton. Leibnitz sah das Integral als eine unendlich große Menge an Flächen die unendlich klein sind. Damit zeigte er den wichtigen Zusammenhang zwischen Integration und Fläche. Isaac Newton nutzte die Geometrie, um den Unterschied zwischen Distanz, Geschwindigkeit und Beschleunigung zu beschreiben. Das ist der Schlüssel, um das Verhältnis zwischen Integral und Ableitung zu verstehen. Krümmung ist die Ableitung von Steigung und Steigung ist die Ableitung von Strecke/Distanz. Distanz ist hingegen das Integral von Steigung und Steigung ist das Integral von Krümmung. 1823 hat Cauchy das Integral per Limes definiert. Im 19. Jahrhundert beschrieb Siméon Denis Poisson das bestimmte Integral als die Differenz der Stammfunktion [F(b)-F(a)]. Um 1950 wurden die Theorien zu einem Hauptsatz der Differential- und Integralrechnung zusammengefasst. [\cite[vgl.]{DMB}]
+	Genutzte Quellen: [\cite[vgl.]{DMB}]\\
+	Die Geschichte des Hauptsatzes der Differential- und Integralrechnung beginnt im 17. Jahrhundert mit Gottfried Leibnitz und Isaac Newton. Leibnitz sah das Integral als eine unendlich große Menge an Flächen die unendlich klein sind. Damit zeigte er den wichtigen Zusammenhang zwischen Integration und Fläche. Isaac Newton nutzte die Geometrie, um den Unterschied zwischen Distanz, Geschwindigkeit und Beschleunigung zu beschreiben. Das ist der Schlüssel, um das Verhältnis zwischen Integral und Ableitung zu verstehen. Krümmung ist die Ableitung von Steigung und Steigung ist die Ableitung von Strecke/Distanz. Distanz ist hingegen das Integral von Steigung und Steigung ist das Integral von Krümmung. 1823 hat Cauchy das Integral per Limes definiert. Im 19. Jahrhundert beschrieb Siméon Denis Poisson das bestimmte Integral als die Differenz der Stammfunktion [F(b)-F(a)]. Um 1950 wurden die Theorien zu einem Hauptsatz der Differential- und Integralrechnung zusammengefasst.
 \newpage
 	
 	
@@ -132,8 +130,15 @@ liststotoc,idxtotoc,bibtotoc]{article}
 	%\subsection{Was ist eine stetige Funktion?}
 		%Text	
 	
+	\section{Riemann-Integral}	
+	\begin{satz}
+	
+	\end{satz}
+	\newpage
+	
 	
 	\section{Mittelwertsatz der Integralrechnung}
+	Genutzte Quellen: [\cite[vgl.]{MWS}]
 	\begin{satz}" "\\
 		Gegeben ist die in $\RR$ definierte Funktion auf dem Intervall $[a, b]$ liegende Funktion $f$ und $g$. $g$ ist außerdem integrierbar und ohne Vorzeichenwechsel, also $g \geq 0$ \textbf{oder} $g \leq 0$. Dann existiert mindestens ein $\xi$, sodass
 		\begin{equation*}
@@ -154,6 +159,7 @@ liststotoc,idxtotoc,bibtotoc]{article}
 		\begin{equation*}
 			k \int_{a}^{b}g(x)dx \leq \int_{a}^{b}f(x)g(x)dx\leq K\int_{a}^{b}g(x)dx
 		\end{equation*}
+		
 	\end{proof}
 	\newpage
 	
@@ -284,7 +290,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	
 	
 	\subsection{Zweiter Teil}
-	
+	Genutzte Quellen: [\cite[vgl.]{SPM}]
 	\begin{satz}" "\\
 	Dieser Teil wird manchmal Zweiter Teil des Hauptsatzes der Differential- und Integralrechnung oder das Newton-Leibniz-Axiom genannt.\\
 	Gegeben ist die in $\RR$ definierte Funktion $f$ auf dem geschlossenen Intervall $[a, b]$, und $F$, eine Stammfunktion von $f$ auf dem Intervall $(a, b)$
@@ -309,6 +315,7 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	\begin{equation*}
 		F(b)-F(a)=F(x_n)-F(x_0)
 	\end{equation*}
+	\newpage
 	Nun wird jedes $F(x_k)$ zusammen mit seinem negativen gegenpart addiert, sodass die daraus ergebende menge folgendes ergibt
 	\begin{multline*}
 	\begin{aligned}
@@ -341,8 +348,9 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	\begin{equation}
 		F(b)-F(a)=\sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
 	\end{equation}
-	--add text--\\
-	Nun wird Limes $\Delta x_k \to 0$ angewendet. Dies bewirkt, dass die Einteilungen, auch Partitionen genannt, gen 0 gehen und die Genauigkeit des Intervalls immer besser wird, da es immer weniger Überschuss oder Ungenauigkeiten gibt.
+	\newpage
+Mit dem oberen Ausdruck in der Summe wird die Fläche eines Rechtecks mit der Breite $\Delta x$ und Höhe $f(c_k)$ beschrieben. Diese Fläche ist eine Annäherung der Fläche unter dem Graphen $f$ jeder Partition. Jede einzelne Partition wird nun addiert, um sich der Fläche unter der Funktion $f$ im Intervall $[a, b]$ anzunähern. Je kleiner $\Delta x$ wird, desto genauer spiegeln die Rechtecke die Fläche unter der Funktion wieder, da es weniger Unterer/Überschuss gibt. Wenn in der Theorie $\Delta x = 0$ erreicht ist,dann  würde die exakte Fläche herauskommen. Da in dem Falle die Höhe von $f$ aber immer mit $0$ addiert werden würde, also $0$ herauskommen würde, und $b$ niemals erreicht werden würde ist dies in der Praxis natürlich nicht umzusetzen.\\
+	Deswegen wird Limes $\Delta x_k \to 0$ angewendet. Dies bewirkt, dass die Partitionen gen 0 gehen und die Genauigkeit des Intervalls immer besser wird, da es immer weniger Ungenauigkeiten gibt.
 	\begin{equation*}
 		\lim \limits_{\Delta x_k \to 0} F(b)-F(a)=\lim \limits_{\Delta x_k \to 0} \sum_{k=1}^{n} [f(c_k)(\Delta x_k)]
 	\end{equation*}
@@ -359,12 +367,22 @@ Wenn man, wie in dem oben gezeigten Fall, die Flächen zweier Integrale von z.B.
 	
 	
 	
-	%\section{Auswirkungen auf die Mathematik}
+	\section{Fazit}
+	joa, is halt toll gewesen, nech?
 	\newpage
 	
 	
 	\nocite{*}
 	\printbibliography[title=Literaturverzeichnis]
+	\newpage
+	\section{Eigenständigkeitserklärung}
+	Ich erkläre, dass ich die Facharbeit ohne fremde Hilfe angefertigt und nur die im
+Literaturverzeichnis angeführten Quellen und Hilfsmittel benutzt habe.\\
 
+\begin{flushleft}
+\makebox[.4\textwidth]{\hrulefill}\hfill \makebox[.4\textwidth]{\hrulefill}\\
+\makebox[.4\textwidth]{(Unterschrift)}\hfill
+\makebox[.4\textwidth]{(Datum)}\\
+\end{flushleft}
 
 \end{document}
